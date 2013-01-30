@@ -14,6 +14,22 @@ Resources:
 <html>
   <head>
     <meta charset='utf-8' />
+    <style>
+    h4 {
+      background-color: yellow;
+      padding: 1em;
+    }
+    li {
+      padding: 0.5em;
+
+    }
+    img {
+      vertical-align: middle;
+      border-radius: 25px;
+      margin-right: 0.8em;
+    }
+
+    </style>
   </head>
   <body>
     <!--Add a button for the user to click to initiate auth sequence -->
@@ -70,7 +86,7 @@ Resources:
 
           // First let's get the profile image
           var request = gapi.client.plus.people.get({
-            'userId': 'me'
+            'userId': '+XGames'
           });
 
           request.execute(function(resp) {
@@ -107,12 +123,16 @@ Resources:
       }
     </script>
     <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
-    
+    <h1>First example - Fetching information using Google Plus API</h1>
+
+    <p>First, let's retrieves a profile name. Since it's winter, let's go with snowboarding and the X-Games, ok?
+    </p>
+
     <div id="content"></div>
-    <p>Retrieves your profile name using the Google Plus API.</p>
+    
+    <h2>Now, we will do a quick search to fetch some players in the snowboarding vertical</h2>
 
     <div id="imagesList"></div>
-
 
   </body>
 </html>
