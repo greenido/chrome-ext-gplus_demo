@@ -1,0 +1,54 @@
+<!--
+
+Author: Ido Green | plus.ly/greenido
+Date: Jan 2013
+Desc: Show a simple 'hello world' extension that works with G+ API.
+
+Resources:
+* https://developers.google.com/apis-explorer/#p/plus/v1/plus.people.search?query=surf&_h=1&
+* https://developers.google.com/+/api/latest/people/search
+* https://code.google.com/p/google-api-javascript-client/
+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <!-- Simple styling to make this page a bit more representative !-->
+    <style>
+    h4 {
+      background-color: yellow;
+      padding: 1em;
+      width: 10em;
+      border-radius: 15px;
+    }
+    li {
+      padding: 0.5em;
+
+    }
+    img {
+      vertical-align: middle;
+      border-radius: 25px;
+      margin-right: 0.8em;
+    }
+
+    </style>
+  </head>
+  <body>
+    <!--Add a button for the user to click to initiate auth sequence -->
+    <button id="authorize-button" style="visibility: hidden">Authorize</button>
+    <script src="js/popup-g+ex1.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+    <h1>First example - Fetching information using Google Plus API</h1>
+
+    <p>First, let's retrieves a profile name. Since it's winter, let's go with snowboarding and the X-Games, ok?
+    </p>
+
+    <div id="content"></div>
+    
+    <h2>Now, we will do a quick search to fetch some players in the snowboarding vertical</h2>
+
+    <div id="imagesList"></div>
+
+  </body>
+</html>

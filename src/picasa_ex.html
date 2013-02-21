@@ -1,0 +1,50 @@
+<!--
+
+Author: Ido Green | plus.ly/greenido
+Date: Jan 2013
+Desc: Show a simple 'hello world' extension that works with picasa API and y! pipes to get it as JSONP.
+
+Resources:
+* https://developers.google.com/apis-explorer/#p/plus/v1/plus.people.search?query=surf&_h=1&
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <style>
+    h4 {
+      background-color: yellow;
+      padding: 1em;
+      width: 10em;
+      border-radius: 15px;
+    }
+    li {
+      padding: 0.5em;
+
+    }
+    img {
+      vertical-align: middle;
+      border-radius: 5px;
+      margin: 0.8em;
+      height: 200px;
+    }
+
+    </style>
+</head>
+<body>
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/picasa_ex.js"></script>
+      
+  <h1>Fetching Images</h1>
+  <p>
+    In this example we are using picasa to get public photos for a certain user.
+  </p>
+
+  <div id="images">
+    <img src="../icons/spinner2.gif" alt="spinner while we are loading the images" />
+
+  </div>
+
+</body>
+</html>

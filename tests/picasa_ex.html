@@ -1,0 +1,61 @@
+<!--
+
+Author: Ido Green | plus.ly/greenido
+Date: Jan 2013
+Desc: Show a simple 'hello world' extension that works with picasa API and y! pipes to get it as JSONP.
+
+Resources:
+* https://developers.google.com/apis-explorer/#p/plus/v1/plus.people.search?query=surf&_h=1&
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <style>
+    h4 {
+      background-color: yellow;
+      padding: 1em;
+      width: 10em;
+      border-radius: 15px;
+    }
+    li {
+      padding: 0.5em;
+
+    }
+    img {
+      vertical-align: middle;
+      border-radius: 5px;
+      margin: 0.8em;
+      height: 200px;
+    }
+
+    </style>
+</head>
+<body>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript">
+      $(function() {
+        var userName = "greenido";
+        var q = 'http://pipes.yahoo.com/pipes/pipe.run?_id=198ab6b1cb9e8d96363c9b16484587a6&_render=json&username=' + userName;
+        $.getJSON(q , function(data) {
+            console.log(data);
+          $.each(data.value.items, function(i,item){
+            var url = item.imgurl;
+            $("<img/>").attr("src", url).appendTo("#images"); 
+            if ( i == 30 ) return false;
+          });
+        });
+      });   
+
+    </script>
+
+  <h1>Fetching Images</h1>
+  <p>
+    In this example we are using picasa to get public photos for a certain user.
+  </p>
+
+  <div id="images"></div>
+
+</body>
+</html>
