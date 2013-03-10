@@ -4,9 +4,9 @@
 chrome.omnibox.onInputChanged.addListener(
   function(text, suggest) {
     suggest([
-      {content: "CRM" , description: "will fetch the internal CRM"},
-      {content: "ERP" , description: "will fetch the internal ERP"},
-      {content: "sales", description: "will fetch the lastest sales report"}
+      {content: "CRM" , description: " fetch the internal CRM"},
+      {content: "ERP" , description: " fetch the internal ERP"},
+      {content: "sales", description: " fetch the lastest sales report"}
     ]);
   });
 
