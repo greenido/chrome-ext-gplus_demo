@@ -1,5 +1,5 @@
 {
-  "name": "Omnibox Example",
+  "name": "Omnibox customization example",
   "description" : "To use, type 'get' plus a search term into the Omnibox.",
   "version": "1.1",
   "background": {

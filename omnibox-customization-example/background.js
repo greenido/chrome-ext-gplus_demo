@@ -1,4 +1,3 @@
-
 // each time the user updates the text in the omnibox this event
 // is fired and we will use it to suggest 
 // search terms for our internal users.
